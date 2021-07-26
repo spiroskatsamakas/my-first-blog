@@ -1,0 +1,209 @@
+οπου djangogirls=djangospiros
+
+command-line
+$ mkdir djangogirls
+$ cd djangogirls
+
+
+command-line
+C:\Users\Name\djangogirls> python -m venv myvenv
+
+C:\Users\user\Desktop\djangospiros>myvenv\Scripts\activate
+
+(myvenv) C:\Users\user\Desktop\djangospiros
+
+(myvenv) C:\Users\user\Desktop\djangospiros>mkdir requirements.txt
+
+Τώρα τρέξτε pip install -r requirements.txt για να ξεκινήσει η εγκατάσταση του Django.
+
+
+(myvenv) C:\Users\user\Desktop\djangospiros\requirements.txt>pip install -r requirements.txt
+Collecting Django~=2.2.4
+  Downloading Django-2.2.24-py3-none-any.whl (7.5 MB)
+     |████████████████████████████████| 7.5 MB 6.4 MB/s
+Collecting sqlparse>=0.2.2
+  Using cached sqlparse-0.4.1-py3-none-any.whl (42 kB)
+Collecting pytz
+  Using cached pytz-2021.1-py2.py3-none-any.whl (510 kB)
+Installing collected packages: sqlparse, pytz, Django
+Successfully installed Django-2.2.24 pytz-2021.1 sqlparse-0.4.1
+WARNING: You are using pip version 20.2.3; however, version 21.2.1 is available.
+You should consider upgrading via the 'c:\users\user\desktop\djangospiros\myvenv\scripts\python.exe -m pip install --upgrade pip' command.
+
+(myvenv) C:\Users\user\Desktop\djangospiros\requirements.txt>
+
+
+Εγκαθιστώντας το Git
+Installing Git: Windows
+Μπορείτε να κατεβάσετε το Git από το git-scm.com. Μπορείτε να πατάτε "επόμενο" σε όλα τα στάδια εκτός από δύο: στο στάδιο που ρωτάει για τον προτιμώμενο επεξεργαστή κειμένου θα πρέπει να επιλέξετε το Nano και στο στάδιο με το όνομα "Adjusting your PATH environment", θα πρέπει να επιλέξετε το "Use Git and optional Unix tools from the Windows Command Prompt" (την τελευταία επιλογή). Εκτός από αυτό, οι προκαθορισμένες ρυθμίσεις είναι μια χαρά. Επίσης, οι επιλογές Checkout Windows-style και Commit Unix-style είναι μια χαρά.
+
+Μη ξεχάσετε να επανεκκινήσετε τη γραμμή εντολών ή το PowerShell μετά την επιτυχής εγκατάσταση.
+
+
+Δημιουργία GitHub λογαριασμού
+Πηγαίνετε στο GitHub.com και φτιάξτε έναν δωρεάν λογαριασμό. Σιγουρευτείτε ότι θα θυμάστε τον κωδικό πρόσβασης (προσθέστε τον σε κάποιον password manager, αν χρησιμοποιείτε κάποιον).
+
+Σημείωση Όταν επιλέξετε όνομα χρήστη θυμηθείτε ότι τα urls του blog σας θα έχουν τη μορφή yourusername.pythonanywhere.com. Οπότε επιλέξτε είτε το συνηθισμένο σας όνομα χρήστη (πχ αυτό που βάλατε στο GitHub) είτε κάποιο που να ταιριάζει με τη θεματολογία του blog σας. Επίσης, σιγουρευτείτε ότι θα θυμάστε τον κωδικό πρόσβασης σας.
+
+Δημιουργώντας ένα PythonAnywhere API token
+Αυτό είναι κάτι που πρέπει να κάνετε μόνο μια φορά. Μετά την εγραφή σας στο PythonAnywhere θα μεταφερθείτε στο ταμπλό σας. Βρείτε το σύνδεσμο "Λογαριασμός" πάνω δεξιά στη σελίδα σας:
+
+Σύνδεσμος λογαριασμού πάνω δεξιά στη σελίδα
+
+στη συνέχεια επιλέξτε την καρτέλα που ονομάζεται "API Token" και πατήστε το κουμπί που λεει "Δημιουργία νέου API Token".
+
+Your API token
+b22fbefb3afcf98cd7714eb163b0bb3ed9c7420b
+
+
+
+
+Το πρώτο σας Django project!
+
+
+
+Θυμηθείτε να εκτελείτε τα πάντα μέσα σε κάποιο εικονικό περιβάλλον. Εάν δεν δείτε ένα πρόθεμα (myenv) στην κονσόλα σας, θα πρέπει να ενεργοποιήσετε το εικονικό περιβάλλον σας. Εξηγήσαμε πως να το κάνετε αυτό στο κεφάλαιο Εγκατάσταση Django στην ενότητα Δουλεύοντας με το εικονικό περιβάλλον. Σε Windows δοκιμάστε να γράψετε myvenv\Scripts\activate ή αν έχετε Lixux/OS X γράψτε source myvenv/bin/activate.
+
+
+
+
+
+
+C:\Users\user\Desktop>cd djangospiros
+
+C:\Users\user\Desktop\djangospiros>myvenv\Scripts\activate
+
+(myvenv) C:\Users\user\Desktop\djangospiros>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microsoft Windows [Version 10.0.19042.1110]
+(c) Microsoft Corporation. Με επιφύλαξη κάθε νόμιμου δικαιώματος.
+
+C:\Users\user>cd desktop
+
+C:\Users\user\Desktop>cd djangospiros
+
+C:\Users\user\Desktop\djangospiros>myvenv\Scripts\activate
+
+(myvenv) C:\Users\user\Desktop\djangospiros>python manage.py startapp blog
+
+(myvenv) C:\Users\user\Desktop\djangospiros>python manage.py makemigrations blog
+Migrations for 'blog':
+  blog\migrations\0001_initial.py
+    - Create model Post
+
+(myvenv) C:\Users\user\Desktop\djangospiros>python manage.py migrate blog
+Operations to perform:
+  Apply all migrations: blog
+Running migrations:
+  Applying blog.0001_initial... OK
+
+(myvenv) C:\Users\user\Desktop\djangospiros>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 26, 2021 - 16:42:23
+Django version 2.2.24, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[26/Jul/2021 16:42:27] "GET /admin/ HTTP/1.1" 302 0
+[26/Jul/2021 16:42:27] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+[26/Jul/2021 16:42:28] "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+[26/Jul/2021 16:42:28] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17944
+[26/Jul/2021 16:42:28] "GET /static/admin/css/login.css HTTP/1.1" 200 1233
+
+(myvenv) C:\Users\user\Desktop\djangospiros>python manage.py createsuperuser
+Username (leave blank to use 'user'):
+Email address: spiroskatsamakas@gmail.com
+Password:
+Password (again):
+Superuser created successfully.
+
+(myvenv) C:\Users\user\Desktop\djangospiros>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 26, 2021 - 16:44:49
+Django version 2.2.24, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[26/Jul/2021 16:44:57] "GET /admin/ HTTP/1.1" 302 0
+[26/Jul/2021 16:44:57] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+[26/Jul/2021 16:45:24] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[26/Jul/2021 16:45:24] "GET /admin/ HTTP/1.1" 200 3693
+[26/Jul/2021 16:45:24] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[26/Jul/2021 16:45:24] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[26/Jul/2021 16:45:24] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[26/Jul/2021 16:46:57] "GET /admin/blog/post/add/ HTTP/1.1" 200 7254
+[26/Jul/2021 16:46:57] "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+[26/Jul/2021 16:46:57] "GET /static/admin/js/calendar.js HTTP/1.1" 200 7777
+[26/Jul/2021 16:46:57] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2021 16:46:57] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[26/Jul/2021 16:46:57] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20218
+[26/Jul/2021 16:46:57] "GET /static/admin/js/core.js HTTP/1.1" 200 7099
+[26/Jul/2021 16:46:57] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[26/Jul/2021 16:46:57] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 287630
+[26/Jul/2021 16:46:57] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+[26/Jul/2021 16:46:57] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+[26/Jul/2021 16:46:57] "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
+[26/Jul/2021 16:46:57] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+[26/Jul/2021 16:46:57] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[26/Jul/2021 16:46:57] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[26/Jul/2021 16:46:57] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[26/Jul/2021 16:46:57] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[26/Jul/2021 16:46:57] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[26/Jul/2021 16:47:09] "GET /static/admin/img/calendar-icons.svg HTTP/1.1" 200 1094
+[26/Jul/2021 16:47:18] "POST /admin/blog/post/add/ HTTP/1.1" 200 7564
+[26/Jul/2021 16:47:18] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2021 16:48:24] "POST /admin/blog/post/add/ HTTP/1.1" 302 0
+[26/Jul/2021 16:48:24] "GET /admin/blog/post/ HTTP/1.1" 200 4595
+[26/Jul/2021 16:48:24] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[26/Jul/2021 16:48:24] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2021 16:48:24] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[26/Jul/2021 16:48:24] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[26/Jul/2021 16:48:31] "GET /admin/blog/post/add/ HTTP/1.1" 200 7254
+[26/Jul/2021 16:48:31] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2021 16:48:59] "POST /admin/blog/post/add/ HTTP/1.1" 302 0
+[26/Jul/2021 16:48:59] "GET /admin/blog/post/ HTTP/1.1" 200 4800
+[26/Jul/2021 16:48:59] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2021 16:49:05] "GET /admin/blog/post/add/ HTTP/1.1" 200 7254
+[26/Jul/2021 16:49:05] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2021 16:49:14] "POST /admin/blog/post/add/ HTTP/1.1" 302 0
+[26/Jul/2021 16:49:14] "GET /admin/blog/post/ HTTP/1.1" 200 5100
+[26/Jul/2021 16:49:14] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+
+(myvenv) C:\Users\user\Desktop\djangospiros>cd
+C:\Users\user\Desktop\djangospiros
+
+(myvenv) C:\Users\user\Desktop\djangospiros>git init
+Initialized empty Git repository in C:/Users/user/Desktop/djangospiros/.git/
+
+(myvenv) C:\Users\user\Desktop\djangospiros>git config --global user.name "spiroskatsamakas"
+
+(myvenv) C:\Users\user\Desktop\djangospiros>git config --global user.email spiroskatsamakas@gmail.com
